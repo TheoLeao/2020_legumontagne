@@ -1,0 +1,91 @@
+a, a:link, a:visited, a:focus, a:hover, a:active {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.img {
+  width: 100%;
+}
+
+@media (min-width: 0px) {
+  header {
+    background-color: #416c24;
+  }
+  .linksHeader {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    padding: 20px 25px 0px 25px;
+  }
+  .linksHeader h4 {
+    color: white;
+  }
+  .bloc {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .logoHeader {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .imgLogo {
+    width: 80vw;
+  }
+  .sloganHeader {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .sloganHeader h1 {
+    font-size: 28px;
+    color: white;
+  }
+  .menu {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: 55px;
+    -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+  }
+  .menu h2 {
+    font-size: 20px;
+  }
+  .cadre_jaune_menu {
+    background-color: #f4c303;
+  }
+  .cadre_vert_menu {
+    background-color: #7bb51d;
+  }
+  .logoBio {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-color: green;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: brown;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

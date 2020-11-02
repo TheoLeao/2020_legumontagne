@@ -1,0 +1,120 @@
+//Définition des breakpoints via une MAP
+$breakpoints: (
+  'small' : '0px',
+  'medium': '800px',
+  'large': '1000px',
+  'huge': '1200px',
+);
+
+//Mixin qui permet d'utiliser facilement les mediaQueries
+@mixin respond-to($breakpoint) {
+    // Retrieves the value from the key
+    $value: map-get($breakpoints, $breakpoint);
+    
+    //Si la clé existe dans la MAP
+    @if $value != null {
+        //Retourner le media queries avec la valeur correspondant à la clé
+        @media (min-width: $value) {
+        @content;
+        }
+    }
+    
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Problème `#{$breakpoint}`. "
+            + "Vérifier que  `$breakpoints` est définit dans la map.";
+    }
+}
+
+// RESET //
+
+a, a:link, a:visited, a:focus, a:hover, a:active{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.img{
+    width: 100%;        
+}
+
+//Mixin qui permet d'inclure les propriétés qui définisse une ligne avec flexbox
+@mixin ligne() {
+    display: flex;
+    width: 100vw;
+  }
+
+//SCSS//
+
+@include respond-to('small') {
+    //Header
+    header{
+        background-color: #416c24;
+    }
+    .linksHeader{  
+        @include ligne;    
+        justify-content: space-between;
+        padding:20px 25px 0px 25px;
+        h4{
+            color: white
+        }
+    }
+    .bloc{
+        display: flex;
+    }
+    .logoHeader{
+        @include ligne;
+        justify-content: center;
+    }
+    .imgLogo{
+        width: 80vw; 
+    }
+    .sloganHeader{
+        @include ligne;
+        justify-content: center;
+        h1{
+            font-size: 28px;
+            color:white;
+        }
+    }
+
+    .menu {
+        @include ligne;
+        height: 55px;
+        justify-content: space-evenly;
+        h2{
+            font-size: 20px;
+        }
+        
+    }
+    .cadre_jaune_menu{
+        background-color: #f4c303;
+    }
+    .cadre_vert_menu{
+        background-color: #7bb51d;
+    }
+    .logoBio{
+        width: 50%;
+    }
+}
+
+@include respond-to('medium') {
+    body{
+        background-color: red;  
+    }     
+}
+@include respond-to('large') {
+    body{
+        background-color: green;  
+    }     
+}
+@include respond-to('huge') {
+    body{
+        background-color: brown;  
+    }     
+}
+
+
+
+
+

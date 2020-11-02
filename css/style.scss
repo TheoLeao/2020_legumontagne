@@ -45,18 +45,23 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
   }
 
 //SCSS//
+$darkGreen: #416c24;
+$lightGreen: #7bb51d;
+$yellow: #f4c303;
+
 
 @include respond-to('small') {
     //Header
     header{
-        background-color: #416c24;
+        background-color: $darkGreen;
     }
     .linksHeader{  
         @include ligne;    
         justify-content: space-between;
         padding:20px 25px 0px 25px;
         h4{
-            color: white
+            color: white;
+            font-size:14px;
         }
     }
     .bloc{
@@ -73,29 +78,49 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
         @include ligne;
         justify-content: center;
         h1{
-            font-size: 28px;
+            font-size: 24px;
             color:white;
         }
     }
-
     .menu {
+        $menuHeight: 60px;
         @include ligne;
-        height: 55px;
+        height: $menuHeight;
         justify-content: space-evenly;
-        h2{
-            font-size: 20px;
+        .cadre_jaune_menu{
+            justify-content: center;
+            align-items: center;
+            background-color: $yellow;
+            flex-grow: 2;
         }
-        
+        .cadre_vert_menu{
+            justify-content: center;
+            align-items: center;
+            background-color: $lightGreen;
+            flex-grow: 2;
+        }
+        h2{
+            
+            font-size: 15px;
+            a {
+                color: black;
+            }
+        }
+        .logoBio{
+            width: $menuHeight;
+        } 
     }
-    .cadre_jaune_menu{
-        background-color: #f4c303;
+
+    .row{
+        @include ligne;
     }
-    .cadre_vert_menu{
-        background-color: #7bb51d;
+    .cadre_vert{
+        background-color: $darkGreen;
     }
-    .logoBio{
-        width: 50%;
-    }
+
+    
+
+    
 }
 
 @include respond-to('medium') {

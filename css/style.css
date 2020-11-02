@@ -22,6 +22,7 @@ a, a:link, a:visited, a:focus, a:hover, a:active {
   }
   .linksHeader h4 {
     color: white;
+    font-size: 14px;
   }
   .bloc {
     display: -ms-flexbox;
@@ -45,28 +46,51 @@ a, a:link, a:visited, a:focus, a:hover, a:active {
         justify-content: center;
   }
   .sloganHeader h1 {
-    font-size: 28px;
+    font-size: 24px;
     color: white;
   }
   .menu {
     display: -ms-flexbox;
     display: flex;
     width: 100vw;
-    height: 55px;
+    height: 60px;
     -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
   }
-  .menu h2 {
-    font-size: 20px;
-  }
-  .cadre_jaune_menu {
+  .menu .cadre_jaune_menu {
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     background-color: #f4c303;
+    -ms-flex-positive: 2;
+        flex-grow: 2;
   }
-  .cadre_vert_menu {
+  .menu .cadre_vert_menu {
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     background-color: #7bb51d;
+    -ms-flex-positive: 2;
+        flex-grow: 2;
   }
-  .logoBio {
-    width: 50%;
+  .menu h2 {
+    font-size: 15px;
+  }
+  .menu h2 a {
+    color: black;
+  }
+  .menu .logoBio {
+    width: 60px;
+  }
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+  }
+  .cadre_vert {
+    background-color: #416c24;
   }
 }
 
